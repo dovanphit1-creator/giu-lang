@@ -1,9 +1,21 @@
 {
-  "status": "pending",
-  "version": null,
+  "status": "published",
+  "version": "1.0.0",
   "repository": "dovanphit1-creator/giu-lang",
-  "releaseUrl": null,
-  "installer": null,
-  "portable": null,
-  "notes": []
+  "releaseUrl": "https://github.com/dovanphit1-creator/giu-lang/releases/tag/v1.0.0",
+  "installer": {
+    "url": "https://github.com/dovanphit1-creator/giu-lang/releases/download/v1.0.0/Giu-Lang-Setup-1.0.0.exe",
+    "size": 52026368,
+    "sha256": "2f49d35aefc038750b457ee8b094e997bb91b9faa68456d91a3d3fee0f2520b7"
+  },
+  "portable": {
+    "url": "https://github.com/dovanphit1-creator/giu-lang/releases/download/v1.0.0/Giu-Lang-Portable-1.0.0-win-x64.zip",
+    "size": 51742501,
+    "sha256": "d2130ab5b4d9922144416d0ee28f4a1483146a6195554c90946b4ada6f9c8daf"
+  },
+  "notes": [
+    "Bản Windows chưa ký số.",
+    "Thiếu toàn văn LICENSE của Node.js 24.21.0.",
+    "Nghĩa vụ giấy phép các dữ liệu bản đồ chưa được xác minh đầy đủ."
+  ]
 }
