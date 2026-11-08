@@ -30,7 +30,7 @@
       enable('portable', release.portable);
       $('version').textContent = release.version;
       $('release-status').textContent = `Đã phát hành · Phiên bản ${release.version}`;
-      $('release-note').textContent = 'Windows 10/11 64-bit. Cần .NET Framework 4.8 và Microsoft Edge WebView2 Runtime. Bản chưa ký số. Còn thiếu toàn văn LICENSE của Node.js 24.21.0; nghĩa vụ giấy phép dữ liệu bản đồ chưa được xác minh đầy đủ. Xem lưu ý trong trang phiên bản trước khi tải.';
+      $('release-note').textContent = 'Windows 10/11 64-bit. Cần .NET Framework 4.8 và Microsoft Edge WebView2 Runtime. Node.js được đóng gói cùng game.';
       $('file-details').textContent = `Bộ cài: ${(release.installer.size / 1048576).toFixed(1)} MB · ZIP: ${(release.portable.size / 1048576).toFixed(1)} MB. SHA-256 bộ cài: ${release.installer.sha256}`;
       $('release-link').href = release.releaseUrl;
       $('release-link').hidden = false;
