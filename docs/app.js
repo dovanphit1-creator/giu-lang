@@ -21,9 +21,28 @@
     link.removeAttribute('tabindex');
     link.classList.remove('disabled');
   }
+  function renderAndroid(release) {
+    const android = release.android;
+    if (!android || android.status !== 'published') return;
+    if (!validRepository(release.repository) ||
+        !/^\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?$/.test(android.version || '') ||
+        !trustedUrl(android.releaseUrl, release.repository, false) ||
+        !validAsset(android.apk, release.repository, '.apk') ||
+        typeof android.minimumAndroid !== 'string' || !android.minimumAndroid.trim()) {
+      $('android-status').textContent = 'Chưa xác minh được bản Android. Vui lòng thử lại sau.';
+      return;
+    }
+    enable('android-apk', android.apk);
+    $('android-status').textContent = `Bản thử nghiệm · Android ${android.version} · Chưa thử trên điện thoại thật`;
+    $('android-note').textContent = `Yêu cầu Android ${android.minimumAndroid} trở lên. Xem hướng dẫn cài đặt và giới hạn kiểm thử tại trang phiên bản.`;
+    $('android-details').textContent = `APK: ${(android.apk.size / 1048576).toFixed(1)} MB. SHA-256: ${android.apk.sha256}`;
+    $('android-release-link').href = android.releaseUrl;
+    $('android-release-link').hidden = false;
+  }
   fetch('./release.json', {cache:'no-store', signal:AbortSignal.timeout(10000)})
     .then(response => { if (!response.ok) throw new Error('manifest'); return response.json(); })
     .then(release => {
+      renderAndroid(release);
       if (release.status !== 'published') return;
       if (!validRepository(release.repository) || !/^\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?$/.test(release.version || '') || !trustedUrl(release.releaseUrl, release.repository, false) || !validAsset(release.installer, release.repository, '.exe') || !validAsset(release.portable, release.repository, '.zip')) throw new Error('invalid release');
       enable('installer', release.installer);
@@ -40,4 +59,3 @@
     })
     .catch(() => { $('release-status').textContent = 'Chưa xác minh được bản phát hành. Vui lòng thử lại sau.'; });
 })();
-
