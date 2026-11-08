@@ -1,13 +1,14 @@
 # Giữ Làng
 
-Trang thông tin và tải Giữ Làng dành cho Windows.
+Giữ Làng 1.0.0 cho Windows 10/11 64-bit.
 
-**Trạng thái:** Đang chuẩn bị bản Windows. Chưa có bộ cài hoặc bản chạy trực tiếp được phát hành công khai.
+- [Tải bộ cài và bản ZIP](https://github.com/dovanphit1-creator/giu-lang/releases/tag/v1.0.0)
+- [Trang tải game](https://dovanphit1-creator.github.io/giu-lang/)
 
-Repository này chứa trang web tải game, không chứa mã nguồn trò chơi hoặc dữ liệu người chơi. Các nút tải chỉ được bật khi bản phát hành đã hoàn tất kiểm tra và thông tin tệp được xác minh.
+Cần .NET Framework 4.8 và Microsoft Edge WebView2 Runtime. Bản Windows chưa ký số. Kiểm tra SHA-256 trong trang phiên bản trước khi cài; không tự động bỏ qua cảnh báo bảo mật.
 
-- Nền tảng dự kiến: Windows 10/11 64-bit.
-- Thành phần cần thiết: .NET Framework 4.8 và Microsoft Edge WebView2 Runtime.
-- Cấu hình phần cứng và dung lượng cuối cùng: chưa công bố.
+## Giấy phép còn chưa hoàn tất
 
-Ảnh minh họa trên trang là ảnh bản dựng ngày 01/11/2026, không phải cam kết về giao diện của bản phát hành cuối cùng.
+Gói có những notices và giấy phép hiện có, nhưng còn thiếu toàn văn LICENSE của Node.js 24.21.0. Nghĩa vụ phân phối của các dữ liệu bản đồ HydroRIVERS/HydroSHEDS, OpenStreetMap và GSHHG chưa được xác minh đầy đủ. Việc phát hành không phải xác nhận đã hoàn tất quyền phân phối hoặc giấy phép.
+
+Repository này chứa website và gói phát hành, không công khai kho mã nguồn dự án riêng tư hoặc dữ liệu chơi cá nhân. Ảnh website là bản dựng ngày 01/11/2026.
