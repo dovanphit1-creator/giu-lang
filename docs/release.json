@@ -20,16 +20,16 @@
   ],
   "android": {
     "status": "published",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "minimumAndroid": "11",
     "experimental": true,
     "deviceTested": true,
     "testedDevice": "Redmi Note 13 (Android 15)",
-    "releaseUrl": "https://github.com/dovanphit1-creator/giu-lang/releases/tag/v1.0.3",
+    "releaseUrl": "https://github.com/dovanphit1-creator/giu-lang/releases/tag/v1.0.4",
     "apk": {
-      "url": "https://github.com/dovanphit1-creator/giu-lang/releases/download/v1.0.3/Giu-Lang-1.0.3-android.apk",
-      "size": 133527741,
-      "sha256": "52de2504f0b92ad7cf30c40303c64b9c94af1a62d5c2a884a86aca7fa0d35075"
+      "url": "https://github.com/dovanphit1-creator/giu-lang/releases/download/v1.0.4/Giu-Lang-1.0.4-android.apk",
+      "size": 133533947,
+      "sha256": "b2dd1ce050a073b9b669cbdd382b76605d68c0b12c66e124a0fec5b14499b365"
     }
   }
 }
