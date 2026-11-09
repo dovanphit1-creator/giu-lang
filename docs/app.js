@@ -33,7 +33,9 @@
       return;
     }
     enable('android-apk', android.apk);
-    $('android-status').textContent = `Bản thử nghiệm · Android ${android.version} · Chưa thử trên điện thoại thật`;
+    const testedDevice = android.deviceTested === true && typeof android.testedDevice === 'string' && android.testedDevice.trim();
+    const testStatus = testedDevice ? `Đã thử trên ${testedDevice}` : 'Chưa xác nhận kiểm thử trên điện thoại thật';
+    $('android-status').textContent = `Bản thử nghiệm · Android ${android.version} · ${testStatus}`;
     $('android-note').textContent = `Yêu cầu Android ${android.minimumAndroid} trở lên. Xem hướng dẫn cài đặt và giới hạn kiểm thử tại trang phiên bản.`;
     $('android-details').textContent = `APK: ${(android.apk.size / 1048576).toFixed(1)} MB. SHA-256: ${android.apk.sha256}`;
     $('android-release-link').href = android.releaseUrl;
